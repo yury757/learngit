@@ -30,3 +30,5 @@ git reflog // 显示每次提交记录的情况
 git restore [file] // 将head版本的文件恢复到当前文件中
 
 git restore --staged [file] // 把暂存区的修改撤销掉（unstage）
+
+git rm [file] // 删除文件，同样需要commit
