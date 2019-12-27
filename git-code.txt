@@ -1,11 +1,11 @@
 
-mkdir [repository] // 创建空文件夹目录
+mkdir [dir] // 创建空文件夹目录
 
-cd [repository] // 把路径转到资源库所在路径
+cd [dir] // 把路径转到目标目录
 
 pwd // 显示当前目录
 
-git init // 把当前目录初始化为一个可管理的仓库
+git init // 把当前目录初始化为一个可管理的资源库
 
 git add [file] // 向资源库中新增一个文件
 
@@ -31,4 +31,6 @@ git restore [file] // 将head版本的文件恢复到当前文件中
 
 git restore --staged [file] // 把暂存区的修改撤销掉（unstage）
 
-git rm [file] // 删除文件，同样需要commit
+git rm [file] // 从资源库中移除文件，同样需要commit
+
+rm [file] // 从本地删除文件
