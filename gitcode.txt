@@ -1,0 +1,19 @@
+ssh-keygen -t rsa -C "youremail@example.com" // 为本地git创建一个SSH Key，windows用户在user\.ssh中找到id_rsa和id_rsa.pub，分别是私钥和公钥，公钥可以告诉别人，私钥不能泄露出去；在github中新增这个密钥，就可以实现本地git仓库和github的传输
+
+git remote add origin <url> // 将本地仓库添加到github远程仓库，origin是远程仓库的默认名称
+
+git push -u origin master // 将本地仓库的所有内容推送到远程库上，第一次要加“-u”，Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以不用加“-u”。
+
+git clone <url> // 从github上复制代码文件夹到本地仓库，支持ssh协议和https协议
+
+git branch // 查看分支
+
+git branch <name> // 创建新分支
+
+git switch <name> // 切换到另一个分支
+
+git switch -c <name> // 创建并切换到另一个分支
+
+git merge <name> // 将name分支的内容合并到当前分支，Fast-forward模式下是直接把指向master的指针指向dev
+
+git branch -d <name> // 将name分支删除
