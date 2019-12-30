@@ -18,4 +18,4 @@ git merge <name> // 将name分支的内容合并到当前分支，默认Fast-for
 
 git branch -d <name> // 将name分支删除
 
-git log // 查看日志，--graph参数可以看日志图
+git log --graph --pretty=oneline --abbrev-commit // 查看分支日志，--graph参数可以看日志图
