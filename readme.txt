@@ -4,4 +4,4 @@ Git is free software.
 Creating a new branch is quick.
 Creating a new branch is quick and simple.
 
-test --no-ff dev
+test --no-ff master dev
