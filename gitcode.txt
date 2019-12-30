@@ -14,6 +14,8 @@ git switch <name> // 切换到另一个分支
 
 git switch -c <name> // 创建并切换到另一个分支
 
-git merge <name> // 将name分支的内容合并到当前分支，Fast-forward模式下是直接把指向master的指针指向dev
+git merge <name> // 将name分支的内容合并到当前分支，默认Fast-forward模式下是直接把指向master的指针指向dev
 
 git branch -d <name> // 将name分支删除
+
+git log // 查看日志，--graph参数可以看日志图
