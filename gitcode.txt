@@ -45,6 +45,14 @@ git push -u origin master // 将本地仓库的所有内容推送到远程库上
 
 git clone <url> // 从github上复制代码文件夹到本地仓库，支持ssh协议和https协议
 
+git remote -v // 查看远程仓库连接，头单词为仓库名
+
+git remote show <name> // 查看远程name库的信息
+
+git remote remove <name> // 断开<name>远程库连接
+
+git branch -a // 查看远程仓库分支
+
 git branch // 查看分支
 
 git branch <name> // 创建新分支
