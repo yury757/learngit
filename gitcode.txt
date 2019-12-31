@@ -41,6 +41,8 @@ ssh -T git@github.com // 测试密钥是否有用
 
 git remote add origin <url> // 将本地仓库添加到github远程仓库，origin是远程仓库的默认名称
 
+git pull origin master --allow-unrelated-histories // 如果远程库已经有内容了，要把本地库上传到github，则要先把代码拉到本地库融合解决冲突，然后执行下面的提交
+
 git push -u origin master // 将本地仓库的所有内容推送到远程库上，第一次要加“-u”，Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以不用加“-u”。
 
 git clone <url> // 从github上复制代码文件夹到本地仓库，支持ssh协议和https协议
