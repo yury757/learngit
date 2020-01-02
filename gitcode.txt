@@ -1,7 +1,7 @@
 ﻿
-mkdir [dir] // 创建空文件夹目录
+mkdir <dir> // 创建空文件夹目录
 
-cd [dir] // 把路径转到目标目录
+cd <dir> // 把路径转到目标目录
 
 pwd // 显示当前目录
 
@@ -15,13 +15,13 @@ git config --global user.email = <email> // 设置全局的邮箱
 
 git init // 把当前目录初始化为一个可管理的资源库
 
-git add [file] // 向资源库中新增一个文件
+git add <file> // 向资源库中新增一个文件
 
 git status // 资源库当前状态，是否有修改
 
 git diff // 查看修改的内容
 
-git commit -m [description] // 提交，description为本次提交的说明
+git commit -m <description> // 提交，description为本次提交的说明
 
 git log // 查看每次修改的日志
 
@@ -29,19 +29,19 @@ git reset --hard head^ // 回到当前上一个版本，^的数量代表回退�
 
 git reset --hard head~10 // 回退10个版本
 
-git reest --hard [commit id] // 前往[commit id]的特定版本，可以回退也可以前进，commit id没必要写全，前几位就可以了，Git会自动去找。当然也不能只写前一两位，因为Git可能会找到多个版本号，就无法确定是哪一个了。
+git reest --hard <commit id> // 前往<commit id>的特定版本，可以回退也可以前进，commit id没必要写全，前几位就可以了，Git会自动去找。当然也不能只写前一两位，因为Git可能会找到多个版本号，就无法确定是哪一个了。
 
-cat [file] // 打印文件内容
+cat <file> // 打印文件内容
 
 git reflog // 显示每次提交记录的情况
 
-git restore [file] // 将head版本的文件恢复到工作区
+git restore <file> // 将head版本的文件恢复到工作区
 
-git restore --staged [file] // 把暂存区的修改撤销掉（unstage）
+git restore --staged <file> // 把暂存区的修改撤销掉（unstage）
 
-git rm [file] // 从资源库中移除文件，同样需要commit
+git rm <file> // 从资源库中移除文件，同样需要commit
 
-rm [file] // 从本地删除文件
+rm <file> // 从本地删除文件
 
 ssh-keygen -t rsa -C "youremail@example.com" // 为本地git创建一个SSH Key，windows用户在user\.ssh中找到id_rsa和id_rsa.pub，分别是私钥和公钥，公钥可以告诉别人，私钥不能泄露出去；在github中新增这个密钥，就可以实现本地git仓库和github的传输
 
@@ -79,4 +79,15 @@ git branch -d <name> // 将name分支删除
 
 git log --graph --pretty=oneline --abbrev-commit // 查看分支日志，--graph参数可以看日志图
 
-git 
+git stash // 将当前工作区保存另外一个区域（不是暂存区），将head版本的内容恢复到工作区
+
+git stash list // 查看stash区域的列表，是一个栈类型的区域，先进先出，最新进入stash区域的修改的序号为0，其他所有修改序号+1
+
+git stash apply <stash@{id}> // 将stash区域序号为id的修改恢复到工作区，若不加<stash@{id}>，则默认id=0
+
+git stash drop <stash@{id}> // 将stash区域序号为id的修改删除，若不加<stash@{id}>，则默认id=0
+
+git stash pop // 将stash区域序号为0的修改恢复到工作区，同时删除该stash修改。
+
+git cherry-pick <commit-id> // 将提交id为commit-id的修改应用于当前分支，比如当前在dev分支下开发新功能，突然发现master分支有一个bug，这个bug在dev分支同时也存在，可以将dev分支下的工作区先用stash保存，再切换到master分支，将bug修复，再将该修复的提交同时应用于dev分支，这样两个分支的bug都修复了，再用git stash pop就可以恢复原dev工作区的内容
+
