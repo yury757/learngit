@@ -35,7 +35,7 @@ cat [file] // 打印文件内容
 
 git reflog // 显示每次提交记录的情况
 
-git restore [file] // 将head版本的文件恢复到工作区中
+git restore [file] // 将head版本的文件恢复到工作区
 
 git restore --staged [file] // 把暂存区的修改撤销掉（unstage）
 
@@ -78,3 +78,5 @@ git merge --no-ff <name> // 将name分支的内容强制以非快速模式合并
 git branch -d <name> // 将name分支删除
 
 git log --graph --pretty=oneline --abbrev-commit // 查看分支日志，--graph参数可以看日志图
+
+git 
