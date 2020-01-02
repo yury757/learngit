@@ -29,7 +29,7 @@ git reset --hard head^ // 回到当前上一个版本，^的数量代表回退�
 
 git reset --hard head~10 // 回退10个版本
 
-git reest --hard <commit id> // 前往<commit id>的特定版本，可以回退也可以前进，commit id没必要写全，前几位就可以了，Git会自动去找。当然也不能只写前一两位，因为Git可能会找到多个版本号，就无法确定是哪一个了。
+git reest --hard <commit id> // 前往<commit id>的特定版本，可以回退也可以前进，commit id没必要写全，前几位就可以了，Git会自动去找。当然也不能只写前一两位，因为Git可能会找到多个版本号，就无法确定是哪一个了。一般git hash窗口别关掉，可以看到之前提交。比如一次提交，其id为commitA，如果后来撤销了commitA，但是现在又想恢复commitA看看commit A的修改内容，就可以找到commitA的commit-id恢复就行，但是如果这个窗口删掉了，就不能重新应用commitA的提交了。
 
 cat <file> // 打印文件内容
 
