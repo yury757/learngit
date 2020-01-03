@@ -61,6 +61,8 @@ git remote show <name> // 查看远程name库的信息
 
 git remote remove <name> // 断开<name>远程库连接
 
+git push origin --delete <name> // 删除远程库origin中的<name>分支
+
 git branch -a // 查看远程仓库分支
 
 git branch // 查看分支
