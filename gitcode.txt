@@ -125,3 +125,5 @@ git push origin --tags // 推送所有未推送的标签到远程库origin
 git tag -d <name> // 删除名为<name>的标签
 
 git push origin :refs/tags/<name> // 删除远程标签有两部操作：1、执行上一段代码，删除本地标签；2、执行本段代码，将远程的名为<name>的tag删除
+
+.gitignore文件：在仓库根目录新建该文件，在文件中添加你想忽略添加到库中的文件，git就不会把这个文件添加到库中。但是如果你之前这个文件已经在库中了，要先把本地文件剪切至其他文件夹，删除库中的该文件，提交之后，再把文件剪切回来，git status命令就不会提示这个文件untracked。添加忽略的文件夹只需要这样添加：/folder
