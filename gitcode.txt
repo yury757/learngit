@@ -75,7 +75,9 @@ git merge <name> // 将name分支的内容合并到当前分支，默认Fast-for
 
 git merge --no-ff <name> // 将name分支的内容强制以非快速模式合并到当前分支
 
-git branch -d <name> // 将name分支删除
+git branch -d <name> // 将name分支删除，若该分支没有被合并，会删除失败，提示你要合并，如果不想合并，见下一行代码
+
+git branch -D <name> // 危险操作！将name分支强制删除，不会提示有没有被合并
 
 git log --graph --pretty=oneline --abbrev-commit // 查看分支日志，--graph参数可以看日志图
 
