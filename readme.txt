@@ -9,5 +9,3 @@ Creating a new branch is quick and simple.
 test --no-ff master
 
 test --no-ff dev
-
-this is dev
