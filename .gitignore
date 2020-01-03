@@ -1,3 +1,5 @@
+License.txt
+
 # Windows:
 Thumbs.db
 ehthumbs.db
@@ -14,4 +16,3 @@ build
 # My configurations:
 db.ini
 deploy_key_rsa
-License.txt
