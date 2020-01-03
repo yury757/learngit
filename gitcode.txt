@@ -93,7 +93,11 @@ git stash pop // 将stash区域序号为0的修改恢复到工作区，同时删
 
 git cherry-pick <commit-id> // 将提交id为commit-id的修改应用于当前分支，比如当前在dev分支下开发新功能，突然发现master分支有一个bug，这个bug在dev分支同时也存在，可以将dev分支下的工作区先用stash保存，再切换到master分支，将bug修复，再将该修复的提交同时应用于dev分支，这样两个分支的bug都修复了，再用git stash pop就可以恢复原dev工作区的内容
 
-git branch --set-upstream-to=origin/<githubbranch1> <localgitbranch2> // 将本地分支<localgitbranch2>和远程库origin的<githubbranch1>分支建立链接，这样git pull拉代码时，就不会因为master之外的其他分支没有链接导致拉代码失败。如：git branch --set-upstream-to=origin/dev dev
+git branch --set-upstream-to=origin/<githubbranch> <localgitbranch> // 将本地分支<localgitbranch>和远程库origin的<githubbranch>分支建立链接，这样git pull拉代码时，就不会因为master之外的其他分支没有链接导致拉代码失败。如：git branch --set-upstream-to=origin/dev dev
+
+git branch --set-upstream <localgitbranch> origin/<githubbranch> // 同上，建议用这种，和下面这个代码一起记，方便一些
+
+git switch -c <localgitbranch> origin/<githubbranch> // 在本地创建和远程分支对应的分支，应该是会自动链接到远程分支上。
 
 多人协作通常的模式是：
 1、有一个远程库，你先拉下代码（如dev分支），若你本地对应的分支的提交记录的更新程序>=远程库分支的提交记录，则是拉不下来代码的，会一直显示已经是最新的了。
@@ -101,3 +105,7 @@ git branch --set-upstream-to=origin/<githubbranch1> <localgitbranch2> // 将本�
 2、等自己的开发完成后，将自己的开发分支dev2合并到本地dev中。
 3、用git push origin dev将开发完成的代码推到远程库dev分支。
 4、如果失败，看github上的dev分支的提交记录，是不是比你本地的dev新。如是则再要拉一遍代码git pull origin dev，如有冲突在本地解决冲突，然后就可以推到远程库。
+
+git tag <name> // 给当前分支打标签，标签名字为name
+
+git tag // 显示所有标签
