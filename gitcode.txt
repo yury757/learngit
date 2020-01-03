@@ -17,6 +17,8 @@ git init // 把当前目录初始化为一个可管理的资源库
 
 git add <file> // 向资源库中新增一个文件
 
+git add -f <file> // 想资源库中强制新增一个文件，忽略.gitignore文件中跳过的文件
+
 git status // 资源库当前状态，是否有修改
 
 git diff // 查看修改的内容
