@@ -116,6 +116,10 @@ git tag // 显示所有分支的所有标签
 
 git show <name> // 显示名为<name>的tag的详细内容
 
+git push origin <name> // 把名为<name>的标签推送到远程库origin，<name>标签必须是本地库已经打过的标签
+
+git push origin --tags // 推送所有未推送的标签到远程库origin
+
 git tag -d <name> // 删除名为<name>的标签
 
-git push origin <name> // 把名为<name>的标签推送到远程库origin
+git push origin :refs/tags/<name> // 删除远程标签有两部操作：1、执行上一段代码，删除本地标签；2、执行本段代码，将远程的名为<name>的tag删除
