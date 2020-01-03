@@ -108,6 +108,8 @@ git switch -c <localgitbranch> origin/<githubbranch> // 在本地创建和远程
 3、用git push origin dev将开发完成的代码推到远程库dev分支。
 4、如果失败，看github上的dev分支的提交记录，是不是比你本地的dev新。如是则再要拉一遍代码git pull origin dev，如有冲突在本地解决冲突，然后就可以推到远程库。
 
-git tag <name> // 给当前分支打标签，标签名字为name
+git tag <name> // 给当前分支的上一次提交打标签，标签名字为name
+
+git tag <name> <commit-id> // 给提交ID为<commit-id>的提交打上一个名字为<name>的标签，即可以为历史提交加标签
 
 git tag // 显示所有分支的所有标签
