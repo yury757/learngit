@@ -118,7 +118,7 @@ git switch -c <localgitbranch> origin/<githubbranch> // 在本地创建和远程
 
 git tag <name> // 给当前分支的上一次提交打标签，标签名字为name
 
-git tag -a <name> -m <message> <commit-id> // 用-a指定标签名<name>，用-m指定标签信息<massage>，以此给提交ID为<commit-id>的提交打标签
+git tag -a <name> <commit-id> -m <message>  // 用-a指定标签名<name>，用-m指定标签信息<massage>，以此给提交ID为<commit-id>的提交打标签，<commit-id>不用打双引号
 
 git tag // 显示所有分支的所有标签
 
